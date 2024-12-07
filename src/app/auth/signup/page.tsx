@@ -7,6 +7,7 @@ import Link from "next/link";
 // } from "@/components/oauth-signin-buttons";
 import { Suspense } from "react";
 import SignupForm from "./_components/signup-form";
+import { OAuthSigninButtons } from "@/components/oauth-signin-buttons";
 
 export default function SignupPage() {
   return (
@@ -20,9 +21,9 @@ export default function SignupPage() {
         <SignupForm />
         {/* OAuth Links */}
         <div className="my-4 h-1 bg-muted" />
-        {/* <Suspense fallback={<OAuthSigninButtonsSkeleton signup />}>
-          <OAuthSigninButtons signup />
-        </Suspense> */}
+        {/* <Suspense fallback={<OAuthSigninButtonsSkeleton signup />}> */}
+        <OAuthSigninButtons signup />
+        {/* </Suspense> */}
 
         {/* Go to Signin Link */}
         <div className="my-4 h-1 bg-muted" />

@@ -29,10 +29,17 @@ export async function signinUserAction(values: unknown): Promise<Res> {
             error: "Invalid credentials",
             statusCode: 401,
           };
+        // custom error
+        case "OAuthAccountAlreadyLinked" as AuthError["type"]:
+          return {
+            success: false,
+            error: "Login with your Google or Github account.",
+            statusCode: 401,
+          };
         default:
           return {
             success: false,
-            error: "Oops. SOmething went wrong",
+            error: "Oops. Something went wrong",
             statusCode: 500,
           };
       }

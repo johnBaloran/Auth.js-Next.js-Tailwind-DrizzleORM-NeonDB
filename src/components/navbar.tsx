@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Button } from "./ui/button";
+import { NavbarLinks } from "./navbar-links";
 // import { NavbarLinks } from "./navbar-links";
 export const Navbar = () => {
   return (
@@ -12,17 +13,7 @@ export const Navbar = () => {
         <ul className="flex items-center gap-x-4">
           {/* <NavbarLinks /> */}
 
-          <li>
-            <Button variant="outline" size="sm" asChild>
-              <Link href="/auth/signin">Sign In</Link>
-            </Button>
-          </li>
-
-          <li>
-            <Button variant="outline" size="sm" asChild>
-              <Link href="/auth/signup">Sign Up</Link>
-            </Button>
-          </li>
+          <NavbarLinks />
         </ul>
       </div>
     </nav>
